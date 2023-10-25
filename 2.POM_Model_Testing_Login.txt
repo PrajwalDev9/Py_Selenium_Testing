@@ -1,0 +1,66 @@
+from selenium import webdriver
+import time
+import unittest
+
+class LoginTest(unittest.TestCase):
+
+    @classmethod
+    def setUpClass(cls):
+        # Create a new WebDriver instance
+        cls.driver = webdriver.Chrome()
+
+        # Implicitly wait for 10 seconds for elements to become visible
+        cls.driver.implicitly_wait(10)
+
+        # Maximize the browser window
+        cls.driver.maximize_window()
+
+    def test_login_valid(self):
+        # Navigate to the OrangeHRM login page
+        self.driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+
+        # Locate the username element
+        username_element = self.driver.find_element(By.ID, "Username")
+
+        # Enter the username
+        username_element.send_keys("Admin")
+
+        # Locate the password element
+        password_element = self.driver.find_element(By.ID, "txtPassword")
+
+        # Enter the password
+        password_element.send_keys("admin123")
+
+        # Locate the login button
+        login_button = self.driver.find_element(By.ID, "btnLogin")
+
+        # Click the login button
+        login_button.click()
+
+        # Wait for the welcome link to appear
+        self.driver.wait_for_element_to_be_clickable(By.ID, "welcome")
+
+        # Locate the welcome link
+        welcome_link = self.driver.find_element(By.ID, "welcome")
+
+        # Click the welcome link
+        welcome_link.click()
+
+        # Locate the logout link
+        logout_link = self.driver.find_element_by_link_text("Logout")
+
+        # Click the logout link
+        logout_link.click()
+
+        # Wait for 5 seconds
+        time.sleep(5)
+
+    @classmethod
+    def tearDownClass(cls):
+        # Close the browser window
+        cls.driver.close()
+
+        # Quit the WebDriver instance
+        cls.driver.quit()
+
+        print("Done")
