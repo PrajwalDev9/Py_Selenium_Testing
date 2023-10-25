@@ -1,6 +1,6 @@
 # Py_Selenium_Testing
 
-#1.Unit_testing_google.py# :This is a sample Selenium Python project that demonstrates how to automate a simple Google Search test. The project also includes the following features:
+**1.Unit_testing_google.py** :This is a sample Selenium Python project that demonstrates how to automate a simple Google Search test. The project also includes the following features:
 * Implicit wait of 10 seconds
 * Maximized browser window
 * Unit tests
