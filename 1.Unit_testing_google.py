@@ -15,7 +15,7 @@ class GoogleSearch(unittest.TestCase):
         self.driver.find_element_by_name("q").send_keys("Automation")
         self.driver.find_element_by_name("btnK").click()
 
-    def test_search_raghav(self):
+    def test_search(self):
         self.driver.get("https://google.com")
         self.driver.find_element_by_name("q").send_keys("Test Search")
         self.driver.find_element_by_name("btnK1").click()
