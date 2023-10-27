@@ -17,6 +17,11 @@
 **3.Py_Test_Selenium_Login** :This is Selenium Python script that demonstrates testing Login Page by using PyTest to manage tests. The script also includes the following features:
 * Created 3 methods: setup, test, teardown
 * Run from terminalpython -m pytestpy.testpytestpytest filenamepytest -v
+
+**4.Webdriver_manager_Py** :This script demonstrates how to use the webdriver_manager library to manage Selenium WebDriver instances. It creates a Chrome WebDriver instance, navigates to the Google home page, finds the search box element using XPath, enters a search query and submits the form, waits for the page to load, clicks the search button, and then closes the browser.
+
+**5.Xpath_Find_Element_Search** :This script demonstrates how to use XPath to find elements on a web page. It creates a Chrome WebDriver instance, navigates to the Google home page, finds the search box element using XPath, enters a search query and submits the form, finds the search results elements using XPath, and then closes the browser.
+
   
 -----------------------------------------------------------------------------------------------------------------
 To run the project, follow these steps:
