@@ -14,6 +14,10 @@
 * Separate test scripts and objects
 * Create a separate class for Locators
 
+**3.Py_Test_Selenium_Login** :This is Selenium Python script that demonstrates testing Login Page by using PyTest to manage tests. The script also includes the following features:
+* Created 3 methods: setup, test, teardown
+* Run from terminalpython -m pytestpy.testpytestpytest filenamepytest -v
+  
 -----------------------------------------------------------------------------------------------------------------
 To run the project, follow these steps:
 
